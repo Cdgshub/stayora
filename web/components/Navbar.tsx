@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 export default function Navbar() {
@@ -9,10 +10,15 @@ export default function Navbar() {
                       <div className="flex items-center justify-between h-20">
                                 {/* Logo */}
                                           <Link href="/" className="flex items-center">
-                                                      <span className="text-4xl font-extrabold tracking-tight text-blue-700">
-                                                                    Stayora
-                                                                                </span>
-                                                                                          </Link>
+                                            <Image
+                                                src="/logo.png"
+                                                    alt="Stayora"
+                                                        width={190}
+                                                            height={55}
+                                                                priority
+                                                                    className="h-12 w-auto"
+                                                                      />
+                                                                      </Link>
                                                                                                     {/* Desktop Navigation */}
                                                                                                               <nav className="hidden lg:flex items-center gap-8">
                                                                                                                           <Link
